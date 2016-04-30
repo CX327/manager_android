@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="frame_name">
+        <item name="recipes_name">食谱</item>
+        <item name="train_name">列车</item>
+        <item name="note_name">便签</item>
+        <item name="accounting_name">记账</item>
+    </string-array>
+
+</resources>

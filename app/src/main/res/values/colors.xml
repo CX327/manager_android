@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFF</color>
+    <color name="grey">#9E9E9E</color>
+    <color name="grey_light">#E0E0E0</color>
+    <color name="transparent">#00000000</color>
+    <color name="translucent_75">#3F000000</color>
+    <color name="translucent_50">#9F000000</color>
+    <color name="translucent_25">#B2000000</color>
+
+    <color name="gains_boro">#DCDCDC</color>
+    <color name="gains">#a7b6c9</color>
+    <color name="dodger_blue">#1E90FF</color>
+    <color name="green">#1c8049</color>
+    <color name="black">#000000</color>
+    <color name="orange">#EE7600</color>
+    <color name="blue">#6495ED</color>
+    <color name="brown">#8B3E2F</color>
+    <color name="red">#CD3333</color>
+    <color name="frame_blue">#4889db</color>
+    <color name="light_green">#6dc152</color>
+    <color name="grey_deep">#595e64</color>
+</resources>

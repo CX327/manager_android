@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">生活管家</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_frame">FrameActivity</string>
+    <string name="title_activity_recipes">RecipesActivity</string>
+    <string name="title_activity_train">TrainActivity</string>
+    <string name="title_activity_note">NoteActivity</string>
+    <string name="title_activity_accounting">AccountingActivity</string>
+    <string name="title_activity_weather_forecast">WeatherForecastActivity</string>
+
+    <string name="loading">加载中...</string>
+    <string name="title_activity_note_edit">NoteEditActivity</string>
+    <string name="title_activity_note_remind">NoteRemindActivity</string>
+    <string name="title_activity_my_remind">MyRemindActivity</string>
+    <string name="title_activity_consume_edit">ConsumeEditActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_flag">FlagActivity</string>
+
+
+    <string name="see_more">查看更多</string>
+    <string name="no_more">没有更多课程</string>
+    <string name="release_load_more">松开载入更多</string>
+    <string name="title_activity_test">TestActivity</string>
+</resources>

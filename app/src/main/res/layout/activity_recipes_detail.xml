@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/accounting_layout_top"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/frame_blue">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="详细"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_xlsize" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/recipes_detail_img"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/test" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/recipes_detail_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:text="非油炸春卷"
+                android:textColor="@color/black"
+                android:textSize="22sp" />
+
+            <CheckBox
+                android:id="@+id/recipes_collection_check"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:button="@drawable/recipes_collection_check_effect"
+                android:checked="false" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/recipes_detail_imtro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:text="春卷是很多人非常喜欢的小吃，其实自己在家里也会经常做，制作方法非常的简单，如果有喜欢的亲也可以试试哦。"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:text="主要食材"
+            android:textColor="@color/grey"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/recipes_detail_ingredients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="12dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="荷叶饼,6张;韭菜,200g;绿豆芽,200g;肉馅,200g"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:text="其他配料"
+            android:textColor="@color/grey"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/recipes_detail_burden"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="12dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="盐,适量;水淀粉,适量"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:text="步骤"
+            android:textColor="@color/grey"
+            android:textSize="22sp" />
+
+        <org.com.manager.util.MyListView
+            android:id="@+id/recipes_detail_steps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="E:\androidproject\manager_android\app\libs\ormlite-core-4.48.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="e579bd2905d0399af5029aaaf9817d5fa0ca88a5">
+        <dex dex="E:\androidproject\manager_android\app\build\intermediates\pre-dexed\debug\ormlite-core-4.48-8a75cd2e12c94e340e2a60694f38fa19fb5b4fb4.jar" />
+    </item>
+    <item
+        jar="E:\androidproject\manager_android\app\build\intermediates\exploded-aar\com.makeramen\roundedimageview\2.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="814fc0c3ec69a944add398217d90077301501a74">
+        <dex dex="E:\androidproject\manager_android\app\build\intermediates\pre-dexed\debug\classes-588415cb50db95ae0c3ac69d33b18ac3b419acf9.jar" />
+    </item>
+    <item
+        jar="E:\androidproject\manager_android\app\libs\android-async-http-1.4.6.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a845a88238be0b5be9d238652c1bc0605ef91f52">
+        <dex dex="E:\androidproject\manager_android\app\build\intermediates\pre-dexed\debug\android-async-http-1.4.6-323db15e76d542898c44c585b4ce9785e46b5f47.jar" />
+    </item>
+    <item
+        jar="E:\androidproject\manager_android\app\libs\universal-image-loader-1.9.3.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a85588bec3e2c4584d593d3f15df1677321bca72">
+        <dex dex="E:\androidproject\manager_android\app\build\intermediates\pre-dexed\debug\universal-image-loader-1.9.3-0d5fad9171bb79204b71963c563aa03663305873.jar" />
+    </item>
+    <item
+        jar="E:\androidproject\manager_android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="E:\androidproject\manager_android\app\build\intermediates\pre-dexed\debug\classes-b25d43eafec7f0c2a88f476d29ec672e3837f3bc.jar" />
+    </item>
+    <item
+        jar="C:\Users\xi.cheng\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife\7.0.1\d5d13ea991eab0252e3710e5df3d6a9d4b21d461\butterknife-7.0.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
+        <dex dex="E:\androidproject\manager_android\app\build\intermediates\pre-dexed\debug\butterknife-7.0.1-87a53e4ddda46813c1c0d0f4cdc8c4c8c14d7cdb.jar" />
+    </item>
+    <item
+        jar="E:\androidproject\manager_android\app\build\intermediates\exploded-aar\com.android.support\design\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1821601ddbec5ff125653097812823388700af74">
+        <dex dex="E:\androidproject\manager_android\app\build\intermediates\pre-dexed\debug\classes-05bcacd9327d53067013bbcf9fadd9aceef5d4cd.jar" />
+    </item>
+    <item
+        jar="E:\androidproject\manager_android\app\libs\fastjson-1.1.28.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="fc6bbaa6bbecc0fc1c8883a3aae377f7e6416c69">
+        <dex dex="E:\androidproject\manager_android\app\build\intermediates\pre-dexed\debug\fastjson-1.1.28-40c13c0ed3d1158cb0f01ef78c603ded3ba80192.jar" />
+    </item>
+    <item
+        jar="E:\androidproject\manager_android\app\libs\mpandroidchartlibrary-2-0-8.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="673b11a1d7821baca4d5c4b8953a4500b28083ea">
+        <dex dex="E:\androidproject\manager_android\app\build\intermediates\pre-dexed\debug\mpandroidchartlibrary-2-0-8-ea2c215063e9b551dbd6057a9d2cfee799a68336.jar" />
+    </item>
+    <item
+        jar="E:\androidproject\manager_android\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="E:\androidproject\manager_android\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.1-a50895767131862f5ddd537af80e6c179e62e69c.jar" />
+    </item>
+    <item
+        jar="D:\Program Files\SDK\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="E:\androidproject\manager_android\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.1-1d25806611c97234ec11293682e0991818ccd60e.jar" />
+    </item>
+    <item
+        jar="E:\androidproject\manager_android\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="E:\androidproject\manager_android\app\build\intermediates\pre-dexed\debug\classes-baa48fa3b3be27710995535dcb6d79ca27c9bf6b.jar" />
+    </item>
+    <item
+        jar="E:\androidproject\manager_android\app\libs\ormlite-android-4.48.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="afa06f539a4026c10b247386312aa67404b80a16">
+        <dex dex="E:\androidproject\manager_android\app\build\intermediates\pre-dexed\debug\ormlite-android-4.48-56ad4d06c77c738dc1cd889ecd4426f90c5bb709.jar" />
+    </item>
+    <item
+        jar="E:\androidproject\manager_android\app\libs\MapApiLocation_1.3.3.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="71e7604372d8a66689ff8df047e9a748e19a5169">
+        <dex dex="E:\androidproject\manager_android\app\build\intermediates\pre-dexed\debug\MapApiLocation_1.3.3-ff8d379fae44000c83828d1670f15995f0d2c2a2.jar" />
+    </item>
+
+</items>
