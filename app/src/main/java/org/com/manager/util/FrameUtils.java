@@ -4,6 +4,8 @@ package org.com.manager.util;
  * 静态名称
  */
 public class FrameUtils {
+    public static final String SP_HOME_URI = "SP_HOME_URI";
+    public static final String SP_IP = "SP_IP";
     public static final String SP_WEATHER = "weather";
     public static final String SP_WEATHER_TIME = "report_time";
     public static final String SP_WEATHER_STATE = "state";

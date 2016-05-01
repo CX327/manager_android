@@ -1,6 +1,8 @@
 package org.com.manager.frame;
 
 import android.app.Application;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
@@ -8,6 +10,7 @@ import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import org.com.manager.R;
 import org.com.manager.database.ManagerDBHelper;
 import org.com.manager.response.ApiHttpClient;
+import org.com.manager.util.FrameUtils;
 
 /**
  * Created by jie.hua on 2016/3/26.
@@ -15,9 +18,10 @@ import org.com.manager.response.ApiHttpClient;
  */
 public class ManagerApplication extends Application {
     private static ManagerApplication managerApplication;
-    private ManagerDBHelper managerDBHelper;
-    private DisplayImageOptions options;
-    private ApiHttpClient apiHttpClient;
+    private static ManagerDBHelper managerDBHelper;
+    private static DisplayImageOptions options;
+    private static ApiHttpClient apiHttpClient;
+    private static String HOME_URI;
 
     @Override
     public void onCreate() {
@@ -41,6 +45,15 @@ public class ManagerApplication extends Application {
             apiHttpClient = new ApiHttpClient();
         }
         return apiHttpClient;
+    }
+
+    public String getHomeUri() {
+        if (HOME_URI == null||HOME_URI.isEmpty()) {
+            SharedPreferences sp = getInstance().getSharedPreferences(
+                    FrameUtils.SP_HOME_URI, Context.MODE_PRIVATE);
+            HOME_URI = sp.getString(FrameUtils.SP_IP, "");
+        }
+        return HOME_URI;
     }
 
     /**

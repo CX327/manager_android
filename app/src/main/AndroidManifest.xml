@@ -84,6 +84,10 @@
         <activity android:name=".train.StationSearchActivity" />
         <activity android:name=".train.StationSearchResultActivity" />
         <activity android:name=".train.TrainDetailActivity" />
+        <activity
+            android:name=".frame.MoreActivity"
+            android:label="@string/title_activity_more" >
+        </activity>
     </application>
 
 </manifest>

@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">生活管家</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_frame">FrameActivity</string>
@@ -9,11 +8,12 @@
     <string name="title_activity_accounting">AccountingActivity</string>
     <string name="title_activity_weather_forecast">WeatherForecastActivity</string>
 
-    <string name="loading">加载中...</string>
     <string name="title_activity_note_edit">NoteEditActivity</string>
     <string name="title_activity_note_remind">NoteRemindActivity</string>
     <string name="title_activity_my_remind">MyRemindActivity</string>
     <string name="title_activity_consume_edit">ConsumeEditActivity</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_more">MoreActivity</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -23,5 +23,7 @@
     <string name="see_more">查看更多</string>
     <string name="no_more">没有更多课程</string>
     <string name="release_load_more">松开载入更多</string>
-    <string name="title_activity_test">TestActivity</string>
+    <string name="loading">加载中...</string>
+    <string name="app_name">生活管家</string>
+    <string name="ip_tips">tips:  打开cmd，然后输入ipconfig -all，获取本地IP地址</string>
 </resources>

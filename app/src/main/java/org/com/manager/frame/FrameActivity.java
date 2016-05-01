@@ -33,6 +33,7 @@ import org.com.manager.R;
 import org.com.manager.accounting.AccountingActivity;
 import org.com.manager.bean.Weather;
 import org.com.manager.note.NoteActivity;
+import org.com.manager.recipes.FlagActivity;
 import org.com.manager.recipes.RecipesActivity;
 import org.com.manager.train.TrainActivity;
 import org.com.manager.util.FrameUtils;
@@ -54,6 +55,9 @@ import butterknife.OnClick;
  * 首页
  */
 public class FrameActivity extends Activity implements AMapLocalWeatherListener {
+    @Bind(R.id.frame_more)
+    ImageView frameMore;
+
     @Bind(R.id.weather_layout)
     RelativeLayout weatherLayout;
 
@@ -154,6 +158,12 @@ public class FrameActivity extends Activity implements AMapLocalWeatherListener 
     }
 
     private void init() {
+        SharedPreferences sp = FrameActivity.this.getSharedPreferences(
+                FrameUtils.SP_HOME_URI, Context.MODE_PRIVATE);
+        String oldIp = sp.getString(FrameUtils.SP_IP, "");
+        if (oldIp.equals("")) {
+            Toast.makeText(FrameActivity.this, "请先修改IP地址", Toast.LENGTH_SHORT).show();
+        }
         progressDialog = new ProgressDialog(this);
         initPlugin();
         updateWeather();
@@ -330,6 +340,16 @@ public class FrameActivity extends Activity implements AMapLocalWeatherListener 
         progressDialog.show();
         mLocationManagerProxy.requestWeatherUpdates(
                 LocationManagerProxy.WEATHER_TYPE_FORECAST, this);
+    }
+
+    /**
+     * 更多（监听器）
+     */
+    @OnClick(R.id.frame_more)
+    public void goMore() {
+        Intent intent = new Intent();
+        intent.setClass(FrameActivity.this, MoreActivity.class);
+        startActivity(intent);
     }
 
     /**

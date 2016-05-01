@@ -1,6 +1,7 @@
 package org.com.manager.response;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.widget.Toast;
 
 import com.alibaba.fastjson.JSON;
@@ -14,6 +15,7 @@ import org.apache.http.protocol.HTTP;
 import org.com.manager.R;
 import org.com.manager.bean.ApiErrorCodeEnum;
 import org.com.manager.bean.RecommendModel;
+import org.com.manager.frame.ManagerApplication;
 import org.com.manager.util.FrameUtils;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -26,23 +28,31 @@ public class ApiHttpClient {
     /**
      * URI
      */
-    public static final String RECIPES_RECOMMEND_URI = "http://192.168.191.1:8080/recipes/recommend.do";
-    public static final String RECIPES_FLAG_URI = "http://192.168.191.1:8080/recipes/flag.do";
-    public static final String RECIPES_ID_URI = "http://192.168.191.1:8080/recipes/id.do";
-    public static final String RECIPES_ALL_COLLECTION_URI = "http://192.168.191.1:8080/recipes/allCollection.do";
-    public static final String RECIPES_SEARCH_URI = "http://192.168.191.1:8080/recipes/keyQuery.do";
-    public static final String RECIPES_SAVE_COLLECTION_URI = "http://192.168.191.1:8080/recipes/saveCollection.do";
-    public static final String RECIPES_CHECK_COLLECTION_URI = "http://192.168.191.1:8080/recipes/checkCollection.do";
-    public static final String RECIPES_DELETE_COLLECTION_URI = "http://192.168.191.1:8080/recipes/deleteCollection.do";
-    public static final String TRAIN_STATION_QUERY_URI = "http://192.168.191.1:8080/train/stationQuery.do";
-    public static final String TRAIN_NUMBER_QUERY_URI = "http://192.168.191.1:8080/train/numberQuery.do";
-    public static final String TRAIN_NUMBER_STATION_LIST_URI = "http://192.168.191.1:8080/train/stationList.do";
+    /**
+     * 端口号，tomcat默认端口号为8080
+     */
+    public static final String HOME_PORT = ":8080/";
+
+    public static final String RECIPES_RECOMMEND_URI = HOME_PORT + "recipes/recommend.do";
+    public static final String RECIPES_FLAG_URI = HOME_PORT + "recipes/flag.do";
+    public static final String RECIPES_ID_URI = HOME_PORT + "recipes/id.do";
+    public static final String RECIPES_ALL_COLLECTION_URI = HOME_PORT + "recipes/allCollection.do";
+    public static final String RECIPES_SEARCH_URI = HOME_PORT + "recipes/keyQuery.do";
+    public static final String RECIPES_SAVE_COLLECTION_URI = HOME_PORT + "recipes/saveCollection.do";
+    public static final String RECIPES_CHECK_COLLECTION_URI = HOME_PORT + "recipes/checkCollection.do";
+    public static final String RECIPES_DELETE_COLLECTION_URI = HOME_PORT + "recipes/deleteCollection.do";
+    public static final String TRAIN_STATION_QUERY_URI = HOME_PORT + "train/stationQuery.do";
+    public static final String TRAIN_NUMBER_QUERY_URI = HOME_PORT + "train/numberQuery.do";
+    public static final String TRAIN_NUMBER_STATION_LIST_URI = HOME_PORT + "train/stationList.do";
+
 
     /**
      * get
      */
-    private void getNet(String uri, RequestParams params, AsyncApiResponseHandler asyncApiResponseHandler) {
+    private void getNet(String uri, RequestParams params,
+                        AsyncApiResponseHandler asyncApiResponseHandler) {
         AsyncHttpClient client = new AsyncHttpClient();
+        uri="http://"+ManagerApplication.getInstance().getHomeUri() + uri;
         if (params == null) {
             client.get(uri, asyncApiResponseHandler);
         } else {
@@ -55,7 +65,7 @@ public class ApiHttpClient {
      */
     private void postNet(String uri, RequestParams params, AsyncApiResponseHandler asyncApiResponseHandler) {
         AsyncHttpClient client = new AsyncHttpClient();
-        client.post(uri, params, asyncApiResponseHandler);
+        client.post(ManagerApplication.getInstance().getHomeUri() + uri, params, asyncApiResponseHandler);
     }
 
     /**
