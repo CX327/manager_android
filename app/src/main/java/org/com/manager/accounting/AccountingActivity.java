@@ -75,10 +75,7 @@ public class AccountingActivity extends Activity {
      * 消费列表 list
      */
     private ArrayList<HashMap<String, Object>> consumeList;
-    /**
-     * 消费数据库dao
-     */
-    private Dao<ConsumeTable, Object> consumeTableDao;
+
     /**
      * 消费列表所属月份
      */
@@ -163,45 +160,6 @@ public class AccountingActivity extends Activity {
         thisMonthIncome = consumeListAdapter.getThisMonthIncome();*/
     }
 
-    /**
-     * 从本地数据库获得消费信息
-     */
-  /*  private ArrayList<HashMap<String, Object>> getConsumeListFromDB(String mouth) {
-        thisMonthPay = 0;
-        thisMonthIncome = 0;
-        ArrayList<HashMap<String, Object>> consumeListTmp = new ArrayList<>();
-        try {
-            consumeTableDao = ManagerApplication.getInstance()
-                    .getManagerDBHelper().getDao(ConsumeTable.class);
-            for (ConsumeTable consumeTable : consumeTableDao) {
-                if (consumeTable.getConsumeTime().contains(mouth)) {
-                    HashMap<String, Object> hashMap = new HashMap<>();
-                    ConsumeTypeEnum consumeType = getConsumeTypeEnum(consumeTable.getConsumeTypeId());
-                    hashMap.put(FrameUtils.IT_ACCOUNTING_TYPE_IMAGE, consumeType.getTypeImage());
-                    hashMap.put(FrameUtils.IT_ACCOUNTING_TIME, consumeTable.getConsumeTime());
-                    hashMap.put(FrameUtils.IT_ACCOUNTING_MONEY, consumeTable.getConsumeMoney());
-                    hashMap.put(FrameUtils.IT_ACCOUNTING_REMARKS, consumeTable.getRemarks());
-                    consumeListTmp.add(hashMap);
-                    if (consumeTable.isConsumeIsPay()) {
-                        thisMonthPay += consumeTable.getConsumeMoney();
-                    } else {
-                        thisMonthIncome += consumeTable.getConsumeMoney();
-                    }
-                }
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        // 按照消费时间降序排列
-        Collections.sort(consumeListTmp, new Comparator<HashMap<String, Object>>() {
-            @Override
-            public int compare(HashMap<String, Object> arg0, HashMap<String, Object> arg1) {
-                return ((String) arg1.get(FrameUtils.IT_ACCOUNTING_TIME))
-                        .compareTo((String) arg0.get(FrameUtils.IT_ACCOUNTING_TIME));
-            }
-        });
-        return consumeListTmp;
-    }*/
 
     private void consumeListNet(String accountingMonth) {
         progressDialog = new ProgressDialog(this);

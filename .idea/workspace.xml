@@ -94,93 +94,19 @@
   </component>
   <component name="AndroidLogFilters">
     <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="904013a8-3f66-4686-a630-dfeeed8807a0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_perm_identity_white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_search_white_48dp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/user/ChangeNameActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/user/ChangePwActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/util/ConsumeListAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/bean/ConsumeModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/bean/FlagModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/user/LoginActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/util/NoteListAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/bean/NoteModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/util/PagerSlidingTabStrip.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/recipes/RecipesFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/recipes/RecipesFrame.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/recipes/RecipesSearchActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/util/TabPagerAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/user/UserActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_recipes_frame.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_recipes_search.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_user.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/values/attrs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_recipes.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/frame_change_name.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/frame_change_pw.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_chat_background_tab.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_recipes_frame.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_recipes_search.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_user.xml" />
-      <change type="DELETED" beforePath="E:\androidproject\manager_android\.idea\libraries\MapApiLocation_1_3_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="E:\androidproject\manager_android\.idea\libraries\android_async_http_1_4_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="E:\androidproject\manager_android\.idea\libraries\appcompat_v7_22_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="E:\androidproject\manager_android\.idea\libraries\butterknife_7_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="E:\androidproject\manager_android\.idea\libraries\design_22_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="E:\androidproject\manager_android\.idea\libraries\fastjson_1_1_28.xml" afterPath="" />
-      <change type="DELETED" beforePath="E:\androidproject\manager_android\.idea\libraries\mpandroidchartlibrary_2_0_8.xml" afterPath="" />
-      <change type="DELETED" beforePath="E:\androidproject\manager_android\.idea\libraries\ormlite_android_4_48.xml" afterPath="" />
-      <change type="DELETED" beforePath="E:\androidproject\manager_android\.idea\libraries\ormlite_core_4_48.xml" afterPath="" />
-      <change type="DELETED" beforePath="E:\androidproject\manager_android\.idea\libraries\roundedimageview_2_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="E:\androidproject\manager_android\.idea\libraries\support_annotations_22_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="E:\androidproject\manager_android\.idea\libraries\support_v4_22_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="E:\androidproject\manager_android\.idea\libraries\universal_image_loader_1_9_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="E:\androidproject\manager_android\app\src\main\java\org\com\manager\recipes\FlagActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\androidproject\manager_android\app\src\main\java\org\com\manager\recipes\RecipesActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\androidproject\manager_android\app\src\main\java\org\com\manager\recipes\SearchActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\androidproject\manager_android\app\src\main\res\layout\activity_recipes.xml" afterPath="" />
-      <change type="DELETED" beforePath="E:\androidproject\manager_android\app\src\main\res\values-v21\styles.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/gradle_project_sync_data.bin" afterPath="$PROJECT_DIR$/build/intermediates/gradle_project_sync_data.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/outputFileStates.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
+      <change type="DELETED" beforePath="E:\androidproject\manager_android\app\src\main\java\org\com\manager\database\NoteTable.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/org/com/manager/accounting/AccountingActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/accounting/AccountingActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/org/com/manager/response/ApiHttpClient.java" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/response/ApiHttpClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/org/com/manager/response/AsyncApiResponseHandler.java" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/response/AsyncApiResponseHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/org/com/manager/recipes/CollectionActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/recipes/CollectionActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/org/com/manager/accounting/ConsumeEditActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/accounting/ConsumeEditActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/org/com/manager/frame/FrameActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/frame/FrameActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/org/com/manager/util/FrameUtils.java" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/util/FrameUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/org/com/manager/frame/ManagerApplication.java" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/frame/ManagerApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/org/com/manager/frame/MoreActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/frame/MoreActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/org/com/manager/database/ManagerDBHelper.java" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/database/ManagerDBHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/org/com/manager/train/MyTripFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/train/MyTripFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/org/com/manager/note/NoteActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/note/NoteActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/org/com/manager/note/NoteEditActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/note/NoteEditActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/org/com/manager/train/NumberQueryFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/train/NumberQueryFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/org/com/manager/recipes/RecipesDetailActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/recipes/RecipesDetailActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/org/com/manager/util/RecipesFlagAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/util/RecipesFlagAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/org/com/manager/bean/RecommendModel.java" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/bean/RecommendModel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/org/com/manager/note/RemindNoteActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/note/RemindNoteActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/org/com/manager/train/StationQueryFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/train/StationQueryFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/org/com/manager/train/StationSearchActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/train/StationSearchActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/org/com/manager/train/StationSearchResultActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/train/StationSearchResultActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/org/com/manager/train/TrainDetailActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/train/TrainDetailActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/org/com/manager/weather/WeatherForecastActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/weather/WeatherForecastActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/org/com/manager/frame/WelcomeActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/frame/WelcomeActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_frame.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_frame.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_more.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_more.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_weather_forecast.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_weather_forecast.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="E:\androidproject\manager_android\app\src\main\res\menu\menu_recipes.xml" afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_login.xml" />
     </list>
     <ignored path="manager_android.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -213,43 +139,92 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ChangeNameActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/org/com/manager/user/ChangeNameActivity.java">
+      <file leaf-file-name="AlarmTable.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/org/com/manager/database/AlarmTable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33114755">
-              <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
-              <folding>
-                <element signature="e#1705#1747#0" expanded="true" />
-                <element signature="e#2605#2628#0" expanded="true" />
-                <element signature="e#3237#3269#0" expanded="true" />
-                <element signature="e#3444#3473#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="frame_change_name.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/frame_change_name.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.7666667">
-              <caret line="52" column="48" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChangePwActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/org/com/manager/user/ChangePwActivity.java">
+      <file leaf-file-name="ConsumeTable.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/org/com/manager/database/ConsumeTable.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="63" column="19" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="19" />
-              <folding>
-                <element signature="e#1804#1846#0" expanded="true" />
-                <element signature="e#4073#4104#0" expanded="true" />
-              </folding>
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AccountingActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/org/com/manager/accounting/AccountingActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConsumeEditActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/org/com/manager/accounting/ConsumeEditActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NoteActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/org/com/manager/note/NoteActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ManagerDBHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/org/com/manager/database/ManagerDBHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DatabaseHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/org/com/manager/database/DatabaseHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TrainCollectionTable.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/org/com/manager/database/TrainCollectionTable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5934066">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NoteEditActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/org/com/manager/note/NoteEditActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="249" column="0" selection-start-line="249" selection-start-column="0" selection-end-line="249" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1629,7 +1604,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/org/com/manager/util/TabPagerAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_item_list.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/org/com/manager/recipes/RecipesActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/org/com/manager/recipes/RecipesFragment.java" />
@@ -1645,7 +1619,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/org/com/manager/util/NoteListAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/org/com/manager/util/ConsumeListAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/org/com/manager/bean/ConsumeModel.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/org/com/manager/accounting/AccountingActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_weather_forecast.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_more.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/org/com/manager/frame/WelcomeActivity.java" />
@@ -1657,7 +1630,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/org/com/manager/train/StationSearchActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/org/com/manager/train/StationSearchResultActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/org/com/manager/train/TrainDetailActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/org/com/manager/accounting/ConsumeEditActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_recipes_frame.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/org/com/manager/bean/FlagModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/org/com/manager/bean/RecommendModel.java" />
@@ -1670,8 +1642,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/org/com/manager/train/StationQueryFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/org/com/manager/train/NumberQueryFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/org/com/manager/bean/NoteModel.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/org/com/manager/note/NoteActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/org/com/manager/note/NoteEditActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/org/com/manager/response/ApiHttpClient.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/org/com/manager/note/RemindNoteActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/org/com/manager/user/UserActivity.java" />
@@ -1680,6 +1650,11 @@
         <option value="$PROJECT_DIR$/app/src/main/java/org/com/manager/user/ChangePwActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/org/com/manager/user/ChangeNameActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/com/manager/note/NoteEditActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/com/manager/note/NoteActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/com/manager/accounting/AccountingActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/com/manager/accounting/ConsumeEditActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/com/manager/database/ManagerDBHelper.java" />
       </list>
     </option>
   </component>
@@ -1909,6 +1884,108 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="frame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="manager_android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="manager_android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="manager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="manager_android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="manager_android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="manager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bean" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="manager_android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="manager_android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="manager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="accounting" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2214,9 +2291,9 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20713201" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5536627" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33049405" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37989777" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37989777" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3270869" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2284,13 +2361,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/org/com/manager/note/RemindNoteActivity.java</url>
-          <line>103</line>
+          <line>97</line>
           <properties />
           <option name="timeStamp" value="538" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/org/com/manager/note/RemindNoteActivity.java</url>
-          <line>102</line>
+          <line>96</line>
           <properties />
           <option name="timeStamp" value="539" />
         </line-breakpoint>
@@ -2357,46 +2434,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/com/manager/bean/TrainInfoModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/com/manager/frame/MyRemindActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="28" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/attrs.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/loading_animation.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_note.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.85">
-          <caret line="64" column="59" selection-start-line="64" selection-start-column="39" selection-end-line="64" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/org/com/manager/frame/ManagerApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.38709676">
@@ -2438,14 +2475,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="108" column="77" selection-start-line="108" selection-start-column="77" selection-end-line="108" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/com/manager/accounting/ConsumeEditActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="203" column="74" selection-start-line="203" selection-start-column="74" selection-end-line="203" selection-end-column="74" />
           <folding />
         </state>
       </provider>
@@ -2531,14 +2560,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/com/manager/accounting/AccountingActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1400862">
-          <caret line="206" column="29" selection-start-line="206" selection-start-column="29" selection-end-line="206" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.31034482">
@@ -2562,14 +2583,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6228448">
           <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/com/manager/frame/FrameActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5021552">
-          <caret line="168" column="8" selection-start-line="168" selection-start-column="8" selection-end-line="168" selection-end-column="50" />
           <folding />
         </state>
       </provider>
@@ -2653,28 +2666,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/com/manager/note/NoteActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.3333335">
-          <caret line="199" column="24" selection-start-line="197" selection-start-column="11" selection-end-line="199" selection-end-column="24" />
-          <folding>
-            <element signature="e#2125#2167#0" expanded="true" />
-            <element signature="e#8388#8581#0" expanded="true" />
-            <element signature="e#8580#8581#0" expanded="true" />
-            <element signature="e#8628#8782#0" expanded="true" />
-            <element signature="e#8781#8782#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/com/manager/note/NoteEditActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="290" column="64" selection-start-line="290" selection-start-column="64" selection-end-line="290" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/nodata_my_topic.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -2696,9 +2687,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding>
-            <element signature="e#1734#1776#0" expanded="true" />
-            <element signature="e#6156#6310#0" expanded="true" />
-            <element signature="e#6309#6310#0" expanded="true" />
+            <element signature="e#1521#1563#0" expanded="true" />
+            <element signature="e#5943#6097#0" expanded="true" />
+            <element signature="e#6096#6097#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2730,14 +2721,6 @@
             <element signature="e#435#436#0" expanded="true" />
             <element signature="e#473#474#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/com/manager/response/ApiHttpClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="74" selection-start-line="46" selection-start-column="66" selection-end-line="46" selection-end-column="74" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2781,7 +2764,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.7666667">
+        <state vertical-scroll-proportion="0.6036364">
           <caret line="52" column="48" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="48" />
           <folding />
         </state>
@@ -2789,7 +2772,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/org/com/manager/user/ChangePwActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="2.2567165">
           <caret line="63" column="19" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="19" />
           <folding>
             <element signature="e#1804#1846#0" expanded="true" />
@@ -2800,7 +2783,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/org/com/manager/user/ChangeNameActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33114755">
+        <state vertical-scroll-proportion="-6.0666666">
           <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
           <folding>
             <element signature="e#1705#1747#0" expanded="true" />
@@ -2808,6 +2791,94 @@
             <element signature="e#3237#3269#0" expanded="true" />
             <element signature="e#3444#3473#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/com/manager/frame/FrameActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="168" column="8" selection-start-line="168" selection-start-column="8" selection-end-line="168" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/com/manager/response/ApiHttpClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.16119403">
+          <caret line="46" column="74" selection-start-line="46" selection-start-column="66" selection-end-line="46" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/com/manager/database/AlarmTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/com/manager/note/NoteEditActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="249" column="0" selection-start-line="249" selection-start-column="0" selection-end-line="249" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/com/manager/note/NoteActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/com/manager/database/DatabaseHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/com/manager/database/ConsumeTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/com/manager/accounting/AccountingActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/com/manager/accounting/ConsumeEditActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/com/manager/database/ManagerDBHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/com/manager/database/TrainCollectionTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5934066">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -14,21 +14,14 @@ import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.stmt.DeleteBuilder;
 
 import org.com.manager.R;
-import org.com.manager.bean.StationStationModel;
-import org.com.manager.bean.TrainInfoModel;
-import org.com.manager.database.ManagerDBHelper;
-import org.com.manager.database.NoteTable;
 import org.com.manager.database.TrainCollectionTable;
 import org.com.manager.frame.ManagerApplication;
-import org.com.manager.util.AlarmManagerUtil;
 import org.com.manager.util.FrameUtils;
 import org.com.manager.util.MyAlertDialog;
-import org.com.manager.util.TrainSearchResultAdapter;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;

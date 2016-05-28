@@ -21,10 +21,7 @@ public class ManagerDBHelper extends DatabaseHelper {
         // TODO Auto-generated method stub
         super.onCreate(arg0, arg1);
         try {
-            TableUtils.createTableIfNotExists(connectionSource,
-                    NoteTable.class);
-            TableUtils.createTableIfNotExists(connectionSource,
-                    ConsumeTable.class);
+
             TableUtils.createTableIfNotExists(connectionSource,
                     TrainCollectionTable.class);
             TableUtils.createTableIfNotExists(connectionSource,
@@ -42,10 +39,6 @@ public class ManagerDBHelper extends DatabaseHelper {
         // TODO Auto-generated method stub
         super.onUpgrade(arg0, arg1, arg2, arg3);
         try {
-            TableUtils.dropTable(connectionSource, NoteTable.class,
-                    true);
-            TableUtils.dropTable(connectionSource, ConsumeTable.class,
-                    true);
             TableUtils.dropTable(connectionSource, TrainCollectionTable.class,
                     true);
             TableUtils.dropTable(connectionSource, AlarmTable.class,

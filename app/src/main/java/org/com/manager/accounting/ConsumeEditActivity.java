@@ -99,10 +99,7 @@ public class ConsumeEditActivity extends Activity {
      * 消费时间
      */
     private String consumeDate;
-    /**
-     * 本地消费数据库dao
-     */
-    private Dao<ConsumeTable, String> consumeDao;
+
     /**
      * 消费是否是支出
      */
@@ -186,12 +183,7 @@ public class ConsumeEditActivity extends Activity {
             moneyInt = -moneyInt;
         }
         consumeAddNet(date, moneyInt, isPay, typeId, remarks);
-        /*try {
-            consumeDao = ManagerApplication.getInstance().getManagerDBHelper().getDao(ConsumeTable.class);
-            consumeDao.createOrUpdate(consumeTable);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }*/
+
 
     }
 

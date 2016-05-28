@@ -8,21 +8,14 @@ import android.support.design.widget.FloatingActionButton;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.CheckBox;
-import android.widget.Checkable;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
 
 import com.alibaba.fastjson.JSON;
-import com.j256.ormlite.dao.Dao;
-import com.j256.ormlite.stmt.DeleteBuilder;
 
 import org.com.manager.R;
 import org.com.manager.bean.NoteModel;
-import org.com.manager.bean.RecipesDetailModel;
-import org.com.manager.database.NoteTable;
 import org.com.manager.frame.ManagerApplication;
 import org.com.manager.response.AsyncApiResponseHandler;
 import org.com.manager.util.FrameUtils;
@@ -32,9 +25,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import butterknife.Bind;
@@ -60,7 +51,6 @@ public class NoteActivity extends Activity {
 
     private List<NoteModel> noteList;
 
-    private Dao<NoteTable, String> noteDao = null;
     private ProgressDialog progressDialog = null;
 
 
@@ -119,32 +109,7 @@ public class NoteActivity extends Activity {
         }
     }
 
-   /* */
 
-    /**
-     * 从数据获得便签
-     *//*
-    private ArrayList<HashMap<String, Object>> getNotesFromDB() {
-
-        ArrayList<HashMap<String, Object>> noteListTmp = new ArrayList<>();
-        try {
-            noteDao = ManagerApplication.getInstance()
-                    .getManagerDBHelper().getDao(NoteTable.class);
-            for (NoteTable noteTable : noteDao) {
-
-                HashMap<String, Object> hashMap = new HashMap<>();
-                hashMap.put(FrameUtils.IT_NOTE_ID, noteTable.getNoteId());
-                hashMap.put(FrameUtils.IT_NOTE_TITLE, noteTable.getNoteTitle());
-                hashMap.put(FrameUtils.IT_NOTE_TIME, noteTable.getNoteTime());
-                hashMap.put(FrameUtils.IT_NOTE_REMIND_TIME, noteTable.getNoteRemindTime());
-                hashMap.put(FrameUtils.IT_NOTE_CONTENT, noteTable.getNoteContent());
-                noteListTmp.add(hashMap);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return noteListTmp;
-    }*/
     private void deleteNoteNet(int noteId) {
         ManagerApplication.getInstance().getApiHttpClient().noteDeleteNet(
                 ManagerApplication.getInstance().getUserId(),noteId,
@@ -155,21 +120,7 @@ public class NoteActivity extends Activity {
                     }
                 });
     }
-    /**
-     * 删除
-     */
-  /*  private void deleteNote(int noteId) {
-        try {
-            noteDao = ManagerApplication.getInstance()
-                    .getManagerDBHelper().getDao(NoteTable.class);
-            DeleteBuilder<NoteTable, String> deleteBuilder = noteDao.deleteBuilder();
-            deleteBuilder.where().eq("noteId", noteId);
-            int returnValue = deleteBuilder.delete();
-            initNoteList();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }*/
+
 
     /**
      * 监听器，单击进入新增便签

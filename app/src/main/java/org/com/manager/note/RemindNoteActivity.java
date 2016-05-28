@@ -9,15 +9,11 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
 
 import com.alibaba.fastjson.JSON;
-import com.j256.ormlite.dao.Dao;
-import com.j256.ormlite.stmt.DeleteBuilder;
 
 import org.com.manager.R;
 import org.com.manager.bean.NoteModel;
-import org.com.manager.database.NoteTable;
 import org.com.manager.frame.ManagerApplication;
 import org.com.manager.response.AsyncApiResponseHandler;
 import org.com.manager.util.FrameUtils;
@@ -27,9 +23,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import butterknife.Bind;

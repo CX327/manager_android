@@ -19,11 +19,8 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.j256.ormlite.dao.Dao;
-
 import org.com.manager.R;
 import org.com.manager.bean.NoteModel;
-import org.com.manager.database.NoteTable;
 import org.com.manager.frame.ManagerApplication;
 import org.com.manager.frame.TimeReceiver;
 import org.com.manager.response.AsyncApiResponseHandler;
@@ -32,12 +29,10 @@ import org.com.manager.util.WheelPicker.DatePicker;
 import org.com.manager.util.WheelPicker.TimePicker;
 import org.json.JSONObject;
 
-import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.Random;
 
 import butterknife.Bind;
@@ -107,7 +102,6 @@ public class NoteEditActivity extends Activity {
     private boolean remindSure = false;
 
     private ProgressDialog progressDialog = null;
-    //private Dao<NoteTable, String> noteDao = null;
     private NoteModel noteModel;
 
     @Override
@@ -253,7 +247,7 @@ public class NoteEditActivity extends Activity {
         }
 
         progressDialog.show();
-        NoteTable note;
+
         if (noteId == -1) {
             //此为新增便签
             addNoteNet(noteTitle, noteDate,
@@ -270,13 +264,7 @@ public class NoteEditActivity extends Activity {
                         noteContent, noteRemindTime);
             }
         }
-         /* try {
-          noteDao = ManagerApplication.getInstance()
-                    .getManagerDBHelper().getDao(NoteTable.class);
-            noteDao.createOrUpdate(note);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }*/
+
         //新增提醒
         if (remindSure) {
             Random random = new Random();
