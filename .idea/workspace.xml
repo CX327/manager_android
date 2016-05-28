@@ -98,14 +98,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="904013a8-3f66-4686-a630-dfeeed8807a0" name="Default" comment="">
-      <change type="DELETED" beforePath="E:\androidproject\manager_android\app\src\main\java\org\com\manager\database\NoteTable.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/org/com/manager/accounting/AccountingActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/accounting/AccountingActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/org/com/manager/accounting/ConsumeEditActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/accounting/ConsumeEditActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/org/com/manager/database/ManagerDBHelper.java" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/database/ManagerDBHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/org/com/manager/train/MyTripFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/train/MyTripFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/org/com/manager/note/NoteActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/note/NoteActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/org/com/manager/note/NoteEditActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/note/NoteEditActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/org/com/manager/note/RemindNoteActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/org/com/manager/note/RemindNoteActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="manager_android.iws" />
@@ -212,8 +204,8 @@
       <file leaf-file-name="TrainCollectionTable.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/org/com/manager/database/TrainCollectionTable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5934066">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.81593406">
+              <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -2272,6 +2264,13 @@
       <option name="number" value="Default" />
       <updated>1461687109277</updated>
     </task>
+    <task id="LOCAL-00001" summary="db">
+      <created>1464447903642</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1464447903642</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -2355,6 +2354,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="db" />
+    <option name="LAST_COMMIT_MESSAGE" value="db" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2876,8 +2879,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/org/com/manager/database/TrainCollectionTable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5934066">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.81593406">
+          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
           <folding />
         </state>
       </provider>
