@@ -106,7 +106,7 @@ public class RecipesDetailActivity extends Activity {
      */
     private void checkCollectionNet(String recipesId) {
         ManagerApplication.getInstance().getApiHttpClient()
-                .checkCollectionNet(recipesId, new AsyncApiResponseHandler(RecipesDetailActivity.this) {
+                .checkCollectionNet( ManagerApplication.getInstance().getUserId(), recipesId, new AsyncApiResponseHandler(RecipesDetailActivity.this) {
                     @Override
                     public void onApiResponse(JSONObject response) {
                         super.onApiResponse(response);
@@ -133,7 +133,7 @@ public class RecipesDetailActivity extends Activity {
      */
     private void saveCollectionNet(String recipesId) {
         ManagerApplication.getInstance().getApiHttpClient()
-                .saveCollectionNet(recipesId, new AsyncApiResponseHandler(RecipesDetailActivity.this) {
+                .saveCollectionNet( ManagerApplication.getInstance().getUserId(), recipesId, new AsyncApiResponseHandler(RecipesDetailActivity.this) {
                     @Override
                     public void onApiResponse(JSONObject response) {
                         super.onApiResponse(response);
@@ -146,7 +146,7 @@ public class RecipesDetailActivity extends Activity {
      */
     private void deleteCollectionNet(String recipesId) {
         ManagerApplication.getInstance().getApiHttpClient()
-                .deleteCollectionNet(recipesId, new AsyncApiResponseHandler(RecipesDetailActivity.this) {
+                .deleteCollectionNet( ManagerApplication.getInstance().getUserId(), recipesId, new AsyncApiResponseHandler(RecipesDetailActivity.this) {
                     @Override
                     public void onApiResponse(JSONObject response) {
                         super.onApiResponse(response);
@@ -159,7 +159,7 @@ public class RecipesDetailActivity extends Activity {
         if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
             boolean isChecked = recipesCollectionCheck.isChecked();
             if (isChange && isChecked) {
-            //收藏状态改变且新添加收藏
+                //收藏状态改变且新添加收藏
                 saveCollectionNet(recipesDetailModel.getId());
             } else if (isChange && !isChecked) {
                 //收藏状态改变且取消收藏

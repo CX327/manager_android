@@ -20,15 +20,24 @@ public class AsyncApiResponseHandler extends JsonHttpResponseHandler {
     @Override
     public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
         try {
-            String errmsg = response.getString("errmsg");
-            if (errmsg.isEmpty()) {
+            String ret = response.getString("ret");
+            if ("SUCCESS".equals(ret)) {
                 onApiResponse(response);
             } else {
-                ApiErrorCodeEnum apiErrorCodeEnum = getErrorMsg(errmsg);
-                Toast.makeText(context,
-                        "错误代码：" + apiErrorCodeEnum.getErrorId() + " "
-                                + apiErrorCodeEnum.getErrorDescription() + " " + errmsg,
-                        Toast.LENGTH_SHORT).show();
+                String errMsg = response.getString("errMsg");
+                ApiErrorCodeEnum apiErrorCodeEnum = getErrorMsg(errMsg);
+                if (apiErrorCodeEnum.getErrorId() == "1") {
+                    if (errMsg==null||errMsg.isEmpty()){
+                        errMsg="访问失败";
+                    }
+                    Toast.makeText(context, errMsg,
+                            Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(context,
+                            "错误代码：" + apiErrorCodeEnum.getErrorId() + " "
+                                    + apiErrorCodeEnum.getErrorDescription() + " ",
+                            Toast.LENGTH_SHORT).show();
+                }
                 onApiResponse(null);
             }
         } catch (JSONException e) {

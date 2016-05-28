@@ -106,7 +106,7 @@ public class TrainDetailActivity extends Activity {
         progressDialog.setMessage(getResources().getString(R.string.loading));
         progressDialog.show();
         ManagerApplication.getInstance().getApiHttpClient()
-                .numberQueryNet(trainNumber, new AsyncApiResponseHandler(TrainDetailActivity.this) {
+                .numberQueryNet(ManagerApplication.getInstance().getUserId(),trainNumber, new AsyncApiResponseHandler(TrainDetailActivity.this) {
                     @Override
                     public void onApiResponse(JSONObject response) {
                         super.onApiResponse(response);

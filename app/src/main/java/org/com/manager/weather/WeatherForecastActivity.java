@@ -2,7 +2,6 @@ package org.com.manager.weather;
 
 import android.app.Activity;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.widget.ImageView;

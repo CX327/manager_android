@@ -2,9 +2,11 @@ package org.com.manager.frame;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
@@ -12,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import org.com.manager.R;
+import org.com.manager.user.LoginActivity;
 import org.com.manager.util.FrameUtils;
 
 import java.util.regex.Matcher;
@@ -66,6 +69,24 @@ public class MoreActivity extends Activity {
         editor.putString(FrameUtils.SP_IP, newIp);
         editor.apply();
         Toast.makeText(MoreActivity.this, "成功修改IP", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent();
+        intent.setClass(this, LoginActivity.class);
+        startActivity(intent);
         finish();
+        overridePendingTransition(android.R.anim.slide_in_left,
+                android.R.anim.slide_out_right);
+    }
+
+    /**
+     * 退出
+     */
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
+            finish();
+            overridePendingTransition(android.R.anim.slide_in_left,
+                    android.R.anim.slide_out_right);
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }

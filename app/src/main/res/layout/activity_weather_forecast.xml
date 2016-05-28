@@ -138,7 +138,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
+            android:paddingBottom="24dp"
             android:layout_marginTop="@dimen/activity_horizontal_margin"
             android:background="@color/translucent_75"
             android:orientation="vertical">

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,20 +10,11 @@
         android:layout_height="48dp"
         android:background="@color/frame_blue">
 
-        <ImageView
-            android:id="@+id/recipes_collection_entrance"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="6dp"
-            android:src="@drawable/recipes_collection_press_effect" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="食谱"
+            android:text="搜索食谱"
             android:textColor="@color/white"
             android:textSize="@dimen/text_xlsize" />
     </RelativeLayout>
@@ -53,47 +45,37 @@
                 android:hint="搜索菜谱"
                 android:imeOptions="actionSearch"
                 android:singleLine="true"
-
                 android:textSize="14sp" />
         </LinearLayout>
 
     </LinearLayout>
 
-    <LinearLayout
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="@color/white"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"
+        android:background="@color/grey_light"
+        android:paddingLeft="12dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="搜索结果"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
 
-        <ImageView
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="16dp"
-            android:src="@mipmap/ic_recipes_tuijian" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/grey" />
 
-        <TextView
-            android:id="@+id/recipes_recommend_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:paddingLeft="6dp"
-            android:text="今日推荐"
-            android:textColor="@color/black"
-            android:textSize="@dimen/text_lsize" />
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white"
         android:orientation="vertical">
 
         <ListView
-            android:id="@+id/recipes_recommend_list"
+            android:id="@+id/recipes_search_list"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingLeft="16dp"></ListView>
+            android:layout_height="wrap_content" />
 
         <LinearLayout
             android:id="@+id/no_data_layout"

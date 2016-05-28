@@ -79,7 +79,7 @@ public class StationSearchResultActivity extends Activity {
      */
     private void stationQueryNet(String startStation, String endStation) {
         ManagerApplication.getInstance().getApiHttpClient()
-                .stationQueryNet(startStation, endStation,
+                .stationQueryNet(ManagerApplication.getInstance().getUserId(),startStation, endStation,
                         new AsyncApiResponseHandler(StationSearchResultActivity.this) {
                             @Override
                             public void onApiResponse(JSONObject response) {

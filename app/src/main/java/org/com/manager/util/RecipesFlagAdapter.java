@@ -89,6 +89,7 @@ public class RecipesFlagAdapter extends BaseAdapter {
                 intent.putExtra(FrameUtils.IT_RECIPES_DETAIL, recipesDetailModels.get(position));
                 intent.setClass(context, RecipesDetailActivity.class);
                 context.startActivity(intent);
+
             }
         });
         return view;

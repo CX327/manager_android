@@ -22,6 +22,7 @@ public class ManagerApplication extends Application {
     private static DisplayImageOptions options;
     private static ApiHttpClient apiHttpClient;
     private static String HOME_URI;
+    private static int userId = -1;
 
     @Override
     public void onCreate() {
@@ -31,6 +32,15 @@ public class ManagerApplication extends Application {
 
     public static ManagerApplication getInstance() {
         return managerApplication;
+    }
+
+    public int getUserId() {
+        if (userId == -1) {
+            SharedPreferences sp = getInstance().getSharedPreferences(
+                    FrameUtils.SP_USER_INFO, Context.MODE_PRIVATE);
+            userId = sp.getInt(FrameUtils.SP_USER_ID, -1);
+        }
+        return userId;
     }
 
     public ManagerDBHelper getManagerDBHelper() {
@@ -48,7 +58,7 @@ public class ManagerApplication extends Application {
     }
 
     public String getHomeUri() {
-        if (HOME_URI == null||HOME_URI.isEmpty()) {
+        if (HOME_URI == null || HOME_URI.isEmpty()) {
             SharedPreferences sp = getInstance().getSharedPreferences(
                     FrameUtils.SP_HOME_URI, Context.MODE_PRIVATE);
             HOME_URI = sp.getString(FrameUtils.SP_IP, "");

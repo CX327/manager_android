@@ -5,7 +5,11 @@ package org.com.manager.util;
  */
 public class FrameUtils {
     public static final String SP_HOME_URI = "SP_HOME_URI";
+    public static final String SP_USER_INFO = "SP_USER_INFO";
     public static final String SP_IP = "SP_IP";
+    public static final String SP_USER_ID = "SP_USER_ID";
+    public static final String SP_USER_NAME = "SP_USER_NAME";
+    public static final String SP_USER_PW = "SP_USER_PW";
     public static final String SP_WEATHER = "weather";
     public static final String SP_WEATHER_TIME = "report_time";
     public static final String SP_WEATHER_STATE = "state";

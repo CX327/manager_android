@@ -1,6 +1,7 @@
 package org.com.manager.train;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,6 +9,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
@@ -72,6 +74,7 @@ public class StationQueryFragment extends Fragment {
      */
     @OnClick(R.id.train_station_query)
     public void goSearchResult() {
+
         Intent intent = new Intent();
         intent.putExtra(FrameUtils.IT_TRAIN_STATION_START, startStation.getText().toString());
         intent.putExtra(FrameUtils.IT_TRAIN_STATION_END, endStation.getText().toString());

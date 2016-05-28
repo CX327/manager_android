@@ -20,4 +20,5 @@
     <color name="frame_blue">#4889db</color>
     <color name="light_green">#6dc152</color>
     <color name="grey_deep">#595e64</color>
+    <color name="background_tab_pressed">#6633B5E5</color>
 </resources>

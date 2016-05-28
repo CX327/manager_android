@@ -30,11 +30,11 @@ import com.amap.api.location.AMapLocalWeatherLive;
 import com.amap.api.location.LocationManagerProxy;
 
 import org.com.manager.R;
+import org.com.manager.user.UserActivity;
 import org.com.manager.accounting.AccountingActivity;
 import org.com.manager.bean.Weather;
 import org.com.manager.note.NoteActivity;
-import org.com.manager.recipes.FlagActivity;
-import org.com.manager.recipes.RecipesActivity;
+import org.com.manager.recipes.RecipesFrame;
 import org.com.manager.train.TrainActivity;
 import org.com.manager.util.FrameUtils;
 import org.com.manager.bean.Plugin;
@@ -57,6 +57,8 @@ import butterknife.OnClick;
 public class FrameActivity extends Activity implements AMapLocalWeatherListener {
     @Bind(R.id.frame_more)
     ImageView frameMore;
+    @Bind(R.id.frame_user)
+    ImageView frameUser;
 
     @Bind(R.id.weather_layout)
     RelativeLayout weatherLayout;
@@ -191,7 +193,7 @@ public class FrameActivity extends Activity implements AMapLocalWeatherListener 
         pluginIconList.add(R.mipmap.ic_frame_train);
         pluginIconList.add(R.mipmap.ic_frame_note);
         pluginIconList.add(R.mipmap.ic_frame_accounting);
-        classNameList.add(RecipesActivity.class.getName());
+        classNameList.add(RecipesFrame.class.getName());
         classNameList.add(TrainActivity.class.getName());
         classNameList.add(NoteActivity.class.getName());
         classNameList.add(AccountingActivity.class.getName());
@@ -349,6 +351,18 @@ public class FrameActivity extends Activity implements AMapLocalWeatherListener 
     public void goMore() {
         Intent intent = new Intent();
         intent.setClass(FrameActivity.this, MoreActivity.class);
+        startActivity(intent);
+        overridePendingTransition(android.R.anim.slide_in_left,
+                android.R.anim.slide_out_right);
+    }
+
+    /**
+     * 用户监听器）
+     */
+    @OnClick(R.id.frame_user)
+    public void goUser() {
+        Intent intent = new Intent();
+        intent.setClass(FrameActivity.this, UserActivity.class);
         startActivity(intent);
     }
 

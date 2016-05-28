@@ -1,6 +1,7 @@
 package org.com.manager.accounting;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -10,13 +11,21 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
+import com.alibaba.fastjson.JSON;
 import com.j256.ormlite.dao.Dao;
 
 import org.com.manager.R;
+import org.com.manager.bean.ConsumeModel;
 import org.com.manager.bean.ConsumeTypeEnum;
+import org.com.manager.bean.NoteModel;
 import org.com.manager.database.ConsumeTable;
 import org.com.manager.frame.ManagerApplication;
+import org.com.manager.response.AsyncApiResponseHandler;
+import org.com.manager.util.ConsumeListAdapter;
 import org.com.manager.util.FrameUtils;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
@@ -24,6 +33,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -82,6 +92,8 @@ public class AccountingActivity extends Activity {
      */
     private float thisMonthIncome = 0;
 
+    private ProgressDialog progressDialog = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -97,7 +109,7 @@ public class AccountingActivity extends Activity {
      * 初始化
      */
     private void init(String accountingMonth) {
-        initConsumeList(accountingMonth);
+        consumeListNet(accountingMonth);
         initTv(accountingMonth);
     }
 
@@ -107,6 +119,7 @@ public class AccountingActivity extends Activity {
     private void initTv(String accountingMonth) {
         accountingConsumeMouth.setText(accountingMonth);
         accountingConsumeMouthTv.setText(accountingMonth);
+
         accountingConsumeExpenditure.setText(thisMonthPay + "");
         accountingConsumeIncome.setText(thisMonthIncome + "");
         float sum = thisMonthPay + thisMonthIncome;
@@ -116,9 +129,26 @@ public class AccountingActivity extends Activity {
     /**
      * 初始化消费列表
      */
-    private void initConsumeList(String accountingMonth) {
+    private void initConsumeList(List<ConsumeModel> consumeModels) {
+        if (consumeModels == null || consumeModels.size() == 0) {
+            return;
+        }
         consumeList = new ArrayList<>();
-        consumeList = getConsumeListFromDB(accountingMonth);
+        for (ConsumeModel consumeModel : consumeModels) {
+            HashMap hashMap = consumeModel.getMap();
+            consumeList.add(hashMap);
+            thisMonthPay += consumeModel.getConsumeMoney();
+            thisMonthIncome += consumeModel.getConsumeMoney();
+        }
+        // 按照消费时间降序排列
+        Collections.sort(consumeList, new Comparator<HashMap<String, Object>>() {
+            @Override
+            public int compare(HashMap<String, Object> arg0, HashMap<String, Object> arg1) {
+                return ((String) arg1.get(FrameUtils.IT_ACCOUNTING_TIME))
+                        .compareTo((String) arg0.get(FrameUtils.IT_ACCOUNTING_TIME));
+            }
+        });
+
         SimpleAdapter simpleAdapter = new SimpleAdapter(AccountingActivity.this, consumeList,
                 R.layout.accounting_cosume_item,
                 new String[]{FrameUtils.IT_ACCOUNTING_TYPE_IMAGE, FrameUtils.IT_ACCOUNTING_TIME,
@@ -126,12 +156,17 @@ public class AccountingActivity extends Activity {
                 new int[]{R.id.accounting_consume_item_type, R.id.accounting_consume_item_date,
                         R.id.accounting_consume_item_money, R.id.accounting_consume_item_remarks});
         accountingConsumeListView.setAdapter(simpleAdapter);
+       /* ConsumeListAdapter consumeListAdapter = new ConsumeListAdapter(AccountingActivity.this,
+                consumeModels);
+        accountingConsumeListView.setAdapter(consumeListAdapter);
+        thisMonthPay = consumeListAdapter.getThisMonthPay();
+        thisMonthIncome = consumeListAdapter.getThisMonthIncome();*/
     }
 
     /**
      * 从本地数据库获得消费信息
      */
-    private ArrayList<HashMap<String, Object>> getConsumeListFromDB(String mouth) {
+  /*  private ArrayList<HashMap<String, Object>> getConsumeListFromDB(String mouth) {
         thisMonthPay = 0;
         thisMonthIncome = 0;
         ArrayList<HashMap<String, Object>> consumeListTmp = new ArrayList<>();
@@ -166,19 +201,47 @@ public class AccountingActivity extends Activity {
             }
         });
         return consumeListTmp;
+    }*/
+
+    private void consumeListNet(String accountingMonth) {
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage(getResources().getString(R.string.loading));
+        progressDialog.show();
+        ManagerApplication.getInstance().getApiHttpClient().consumeListNet(
+                ManagerApplication.getInstance().getUserId(), accountingMonth,
+                new AsyncApiResponseHandler(AccountingActivity.this) {
+                    @Override
+                    public void onApiResponse(JSONObject response) {
+                        super.onApiResponse(response);
+                        if (progressDialog != null) {
+                            progressDialog.dismiss();
+                        }
+                        try {
+                            if (response != null) {
+                                JSONArray jsonArray = response.getJSONArray("data");
+                                List<ConsumeModel> consumeModels = JSON.parseArray(jsonArray.toString(),
+                                        ConsumeModel.class);
+                                initConsumeList(consumeModels);
+                            }
+                        } catch (JSONException e) {
+                            initConsumeList(null);
+                        }
+                    }
+                }
+        );
     }
 
     /**
      * 获得消费类型枚举
      */
-    public ConsumeTypeEnum getConsumeTypeEnum(int id) {
+   /* public ConsumeTypeEnum getConsumeTypeEnum(int id) {
         for (ConsumeTypeEnum consumeTypeEnum : ConsumeTypeEnum.values()) {
             if (consumeTypeEnum.getTypeId() == id) {
                 return consumeTypeEnum;
             }
         }
         return ConsumeTypeEnum.YIBAN;
-    }
+    }*/
 
     /**
      * 新增消费（监听器）

@@ -38,9 +38,6 @@
             android:name=".frame.FrameActivity"
             android:label="@string/title_activity_frame" />
         <activity
-            android:name=".recipes.RecipesActivity"
-            android:label="@string/title_activity_recipes" />
-        <activity
             android:name=".train.TrainActivity"
             android:label="@string/title_activity_train" />
         <activity
@@ -75,18 +72,33 @@
         <activity
             android:name=".accounting.ConsumeEditActivity"
             android:label="@string/title_activity_consume_edit" />
-        <activity
-            android:name=".recipes.FlagActivity"
-            android:label="@string/title_activity_flag" />
         <activity android:name=".recipes.RecipesDetailActivity" />
         <activity android:name=".recipes.CollectionActivity" />
-        <activity android:name=".recipes.SearchActivity" />
         <activity android:name=".train.StationSearchActivity" />
         <activity android:name=".train.StationSearchResultActivity" />
         <activity android:name=".train.TrainDetailActivity" />
         <activity
             android:name=".frame.MoreActivity"
             android:label="@string/title_activity_more" >
+        </activity>
+        <activity
+            android:name=".recipes.RecipesFrame"  >
+        </activity>
+        <activity
+            android:name=".recipes.RecipesSearchActivity" >
+        </activity>
+        <activity
+            android:name=".user.UserActivity"  >
+        </activity>
+        <activity
+            android:name=".user.ChangeNameActivity"  >
+        </activity>
+        <activity
+            android:name=".user.ChangePwActivity"  >
+        </activity>
+        <activity
+            android:name=".user.LoginActivity"
+            android:label="@string/title_activity_login" >
         </activity>
     </application>
 

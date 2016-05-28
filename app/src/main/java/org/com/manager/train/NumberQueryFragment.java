@@ -1,5 +1,6 @@
 package org.com.manager.train;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -7,10 +8,12 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.com.manager.R;
 import org.com.manager.util.FrameUtils;
@@ -95,13 +98,25 @@ public class NumberQueryFragment extends Fragment {
      */
     @OnClick(R.id.train_number_query_tv)
     public void goSearchResult() {
-        Intent intent = new Intent();
-        intent.putExtra(FrameUtils.IT_TRAIN_DETAIL, numberQueryEdit.getText().toString());
-        intent.putExtra(FrameUtils.IT_TRAIN_ISCOLLECTION, false);
-        intent.setClass(getActivity(), TrainDetailActivity.class);
-        startActivity(intent);
-        getActivity().overridePendingTransition(android.R.anim.slide_in_left,
-                android.R.anim.slide_out_right);
+        // 先隐藏键盘
+        ((InputMethodManager) numberQueryEdit.getContext()
+                .getSystemService(Context.INPUT_METHOD_SERVICE))
+                .hideSoftInputFromWindow(getActivity()
+                                .getCurrentFocus()
+                                .getWindowToken(),
+                        InputMethodManager.HIDE_NOT_ALWAYS);
+        String trainNumber = numberQueryEdit.getText().toString();
+        if (trainNumber == null || trainNumber.isEmpty()) {
+            Toast.makeText(getActivity(), "请输入车次", Toast.LENGTH_SHORT).show();
+        } else {
+            Intent intent = new Intent();
+            intent.putExtra(FrameUtils.IT_TRAIN_DETAIL, numberQueryEdit.getText().toString());
+            intent.putExtra(FrameUtils.IT_TRAIN_ISCOLLECTION, false);
+            intent.setClass(getActivity(), TrainDetailActivity.class);
+            startActivity(intent);
+            getActivity().overridePendingTransition(android.R.anim.slide_in_left,
+                    android.R.anim.slide_out_right);
+        }
     }
 
     /**

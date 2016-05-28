@@ -3,6 +3,7 @@ package org.com.manager.note;
 import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,12 +22,15 @@ import android.widget.Toast;
 import com.j256.ormlite.dao.Dao;
 
 import org.com.manager.R;
+import org.com.manager.bean.NoteModel;
 import org.com.manager.database.NoteTable;
 import org.com.manager.frame.ManagerApplication;
 import org.com.manager.frame.TimeReceiver;
+import org.com.manager.response.AsyncApiResponseHandler;
 import org.com.manager.util.FrameUtils;
 import org.com.manager.util.WheelPicker.DatePicker;
 import org.com.manager.util.WheelPicker.TimePicker;
+import org.json.JSONObject;
 
 import java.sql.SQLException;
 import java.text.ParseException;
@@ -102,8 +106,9 @@ public class NoteEditActivity extends Activity {
      */
     private boolean remindSure = false;
 
-    private Dao<NoteTable, String> noteDao = null;
-    private HashMap<String, Object> hashMap;
+    private ProgressDialog progressDialog = null;
+    //private Dao<NoteTable, String> noteDao = null;
+    private NoteModel noteModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -117,18 +122,19 @@ public class NoteEditActivity extends Activity {
      * 初始化，若传进便签内容，则显示
      */
     private void init() {
+
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage(getResources().getString(R.string.loading));
         selectDate = "";
         selectTime = "";
-
-        hashMap = new HashMap<>();
-        hashMap = (HashMap) getIntent().getExtras().getSerializable(FrameUtils.IT_NOTE_MAP);
+        NoteModel noteModel = (NoteModel) getIntent().getExtras().getSerializable(FrameUtils.IT_NOTE_MAP);
         editNoteRemindTime.setVisibility(View.INVISIBLE);
-        if (hashMap != null && !hashMap.isEmpty()) {
-            noteId = (Integer) hashMap.get(FrameUtils.IT_NOTE_ID);
-            editNoteTitle.setText((String) hashMap.get(FrameUtils.IT_NOTE_TITLE));
-            editNoteContent.setText((String) hashMap.get(FrameUtils.IT_NOTE_CONTENT));
-            editNoteTime.setText((String) hashMap.get(FrameUtils.IT_NOTE_TIME));
-            noteRemindTime = (String) hashMap.get(FrameUtils.IT_NOTE_REMIND_TIME);
+        if (noteModel != null && noteModel.getNoteTitle() != null) {
+            noteId = noteModel.getId();
+            editNoteTitle.setText(noteModel.getNoteTitle());
+            editNoteContent.setText(noteModel.getNoteContent());
+            editNoteTime.setText(noteModel.getNoteTime());
+            noteRemindTime = noteModel.getNoteRemindTime();
             if (!noteRemindTime.isEmpty()) {
                 editNoteRemindTime.setVisibility(View.VISIBLE);
                 editNoteRemindTime.setCompoundDrawablePadding(10);
@@ -245,41 +251,84 @@ public class NoteEditActivity extends Activity {
                     Toast.LENGTH_SHORT).show();
             return;
         }
+
+        progressDialog.show();
         NoteTable note;
         if (noteId == -1) {
             //此为新增便签
-            note = new NoteTable(noteTitle, noteDate,
+            addNoteNet(noteTitle, noteDate,
                     noteContent, transString(selectDate + selectTime));
         } else {
             //此为修改便签
             if (remindSure) {
                 //新增提醒，update note
-                note = new NoteTable(noteId, noteTitle, noteDate,
+                updateNet(noteId, noteTitle, noteDate,
                         noteContent, transString(selectDate + selectTime));
             } else {
                 //未新增提醒 ，update note,提醒时间不变
-                note = new NoteTable(noteId, noteTitle, noteDate,
+                updateNet(noteId, noteTitle, noteDate,
                         noteContent, noteRemindTime);
             }
         }
-        try {
-            noteDao = ManagerApplication.getInstance()
+         /* try {
+          noteDao = ManagerApplication.getInstance()
                     .getManagerDBHelper().getDao(NoteTable.class);
             noteDao.createOrUpdate(note);
         } catch (SQLException e) {
             e.printStackTrace();
-        }
+        }*/
         //新增提醒
         if (remindSure) {
             Random random = new Random();
             int requestCode = random.nextInt(999999);
             saveRemind(remindSure, noteTitle, noteContent, requestCode);
         }
-        setResult(RESULT_OK);
-        finish();
-        this.overridePendingTransition(
-                android.R.anim.slide_in_left,
-                android.R.anim.slide_out_right);
+
+    }
+
+    private void addNoteNet(String noteTitle, String noteDate,
+                            String noteContent, String noteRemindTime) {
+        ManagerApplication.getInstance().getApiHttpClient().noteAddNet(
+                ManagerApplication.getInstance().getUserId(),
+                noteTitle, noteDate,
+                noteContent, noteRemindTime, new AsyncApiResponseHandler(NoteEditActivity.this) {
+                    @Override
+                    public void onApiResponse(JSONObject response) {
+                        super.onApiResponse(response);
+                        if (progressDialog != null) {
+                            progressDialog.dismiss();
+                        }
+                        setResult(RESULT_OK);
+                        finish();
+                        NoteEditActivity.this.overridePendingTransition(
+                                android.R.anim.slide_in_left,
+                                android.R.anim.slide_out_right);
+                    }
+                }
+        );
+    }
+
+    private void updateNet(int noteId, String noteTitle, String noteDate,
+                           String noteContent, String noteRemindTime) {
+        ManagerApplication.getInstance().getApiHttpClient().noteUpdateNet(
+                ManagerApplication.getInstance().getUserId(),
+                noteId, noteTitle, noteDate,
+                noteContent, noteRemindTime, new AsyncApiResponseHandler(NoteEditActivity.this) {
+                    @Override
+                    public void onApiResponse(JSONObject response) {
+                        super.onApiResponse(response);
+                        if (progressDialog != null) {
+                            progressDialog.dismiss();
+                        }
+                        setResult(RESULT_OK);
+                        finish();
+                        NoteEditActivity.this.overridePendingTransition(
+                                android.R.anim.slide_in_left,
+                                android.R.anim.slide_out_right);
+                    }
+                }
+
+        );
     }
 
     /**

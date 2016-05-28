@@ -1,6 +1,7 @@
 package org.com.manager.accounting;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -20,19 +21,26 @@ import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.alibaba.fastjson.JSON;
 import com.j256.ormlite.dao.Dao;
 
 import org.com.manager.R;
+import org.com.manager.bean.ConsumeModel;
 import org.com.manager.bean.ConsumeTypeEnum;
 import org.com.manager.database.ConsumeTable;
 import org.com.manager.frame.ManagerApplication;
+import org.com.manager.response.AsyncApiResponseHandler;
 import org.com.manager.util.FrameUtils;
 import org.com.manager.util.WheelPicker.DatePicker;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -99,6 +107,8 @@ public class ConsumeEditActivity extends Activity {
      * 消费是否是支出
      */
     private boolean isPay = true;
+
+    private ProgressDialog progressDialog = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -175,18 +185,40 @@ public class ConsumeEditActivity extends Activity {
         if (isPay) {
             moneyInt = -moneyInt;
         }
-        ConsumeTable consumeTable = new ConsumeTable(date, moneyInt, isPay, typeId, remarks);
-        try {
+        consumeAddNet(date, moneyInt, isPay, typeId, remarks);
+        /*try {
             consumeDao = ManagerApplication.getInstance().getManagerDBHelper().getDao(ConsumeTable.class);
             consumeDao.createOrUpdate(consumeTable);
         } catch (SQLException e) {
             e.printStackTrace();
-        }
-        setResult(RESULT_OK);
-        finish();
-        this.overridePendingTransition(
-                android.R.anim.slide_in_left,
-                android.R.anim.slide_out_right);
+        }*/
+
+    }
+
+    private void consumeAddNet(String consumeTime, float consumeMoney,
+                               boolean consumeIsPay, int consumeTypeId,
+                               String remarks) {
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage(getResources().getString(R.string.loading));
+        progressDialog.show();
+        ManagerApplication.getInstance().getApiHttpClient().consumeAddNet(
+                ManagerApplication.getInstance().getUserId(), consumeTime,
+                consumeMoney, consumeIsPay, consumeTypeId, remarks,
+                new AsyncApiResponseHandler(ConsumeEditActivity.this) {
+                    @Override
+                    public void onApiResponse(JSONObject response) {
+                        super.onApiResponse(response);
+                        if (progressDialog != null) {
+                            progressDialog.dismiss();
+                        }
+                        setResult(RESULT_OK);
+                        finish();
+                        ConsumeEditActivity.this.overridePendingTransition(
+                                android.R.anim.slide_in_left,
+                                android.R.anim.slide_out_right);
+                    }
+                }
+        );
     }
 
     /**

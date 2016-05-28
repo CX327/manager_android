@@ -60,9 +60,9 @@ public class CollectionActivity extends Activity {
         allCollectionNet();
     }
 
-    /**
+  /*  *//**
      * 删除收藏，net
-     */
+     *//*
     private void deleteCollectionNet(String recipesId) {
         progressDialog.setMessage(getResources().getString(R.string.loading));
         progressDialog.show();
@@ -77,13 +77,13 @@ public class CollectionActivity extends Activity {
                     }
                 });
     }
-
+*/
     /**
      * 获得全部收藏，net
      */
     private void allCollectionNet() {
         ManagerApplication.getInstance().getApiHttpClient()
-                .allCollectionNet(new AsyncApiResponseHandler(CollectionActivity.this) {
+                .allCollectionNet( ManagerApplication.getInstance().getUserId(), new AsyncApiResponseHandler(CollectionActivity.this) {
                     @Override
                     public void onApiResponse(JSONObject response) {
                         super.onApiResponse(response);
@@ -116,9 +116,9 @@ public class CollectionActivity extends Activity {
         }
     }
 
-    /**
+  /*  *//**
      * 是否删除该收藏
-     */
+     *//*
     private void alertDlg(final String recipesId) {
         final MyAlertDialog alertDialog = new MyAlertDialog(CollectionActivity.this,
                 false);
@@ -139,7 +139,7 @@ public class CollectionActivity extends Activity {
             }
         });
     }
-
+*/
     @Override
     protected void onResume() {
         super.onResume();

@@ -11,33 +11,33 @@ public class RecommendModel implements Serializable {
     /**
      * 推荐分类名称
      */
-    private String title;
+    private FlagModel flagModel;
     /**
      * 分类列表
      */
-    private List<RecommendItemModel> itemModels;
+    private List<RecipesDetailModel> itemModels;
 
     public RecommendModel() {
     }
 
-    public RecommendModel(String title, List<RecommendItemModel> itemModels) {
-        this.title = title;
+    public RecommendModel(FlagModel flagModel, List<RecipesDetailModel> itemModels) {
+        this.flagModel = flagModel;
         this.itemModels = itemModels;
     }
 
-    public String getTitle() {
-        return title;
+    public FlagModel getFlagModel() {
+        return flagModel;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setFlagModel(FlagModel flagModel) {
+        this.flagModel = flagModel;
     }
 
-    public List<RecommendItemModel> getItemModels() {
+    public List<RecipesDetailModel> getItemModels() {
         return itemModels;
     }
 
-    public void setItemModels(List<RecommendItemModel> itemModels) {
+    public void setItemModels(List<RecipesDetailModel> itemModels) {
         this.itemModels = itemModels;
     }
 }

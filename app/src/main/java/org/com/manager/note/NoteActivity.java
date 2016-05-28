@@ -1,6 +1,7 @@
 package org.com.manager.note;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -14,18 +15,27 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
+import com.alibaba.fastjson.JSON;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.stmt.DeleteBuilder;
 
 import org.com.manager.R;
+import org.com.manager.bean.NoteModel;
+import org.com.manager.bean.RecipesDetailModel;
 import org.com.manager.database.NoteTable;
 import org.com.manager.frame.ManagerApplication;
+import org.com.manager.response.AsyncApiResponseHandler;
 import org.com.manager.util.FrameUtils;
 import org.com.manager.util.MyAlertDialog;
+import org.com.manager.util.NoteListAdapter;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -48,9 +58,10 @@ public class NoteActivity extends Activity {
     @Bind(R.id.no_data_layout)
     LinearLayout noDataLayout;
 
-    private ArrayList<HashMap<String, Object>> noteList;
+    private List<NoteModel> noteList;
 
     private Dao<NoteTable, String> noteDao = null;
+    private ProgressDialog progressDialog = null;
 
 
     @Override
@@ -63,16 +74,43 @@ public class NoteActivity extends Activity {
 
     private void initNoteList() {
         noteList = new ArrayList<>();
-        noteList = getNotesFromDB();
-        if (noteList.size() != 0) {
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage(getResources().getString(R.string.loading));
+        progressDialog.show();
+        noteListNet();
+
+    }
+
+    private void noteListNet() {
+        ManagerApplication.getInstance().getApiHttpClient()
+                .noteListNet(ManagerApplication.getInstance().getUserId(),
+                        new AsyncApiResponseHandler(NoteActivity.this) {
+                            @Override
+                            public void onApiResponse(JSONObject response) {
+                                super.onApiResponse(response);
+                                if (progressDialog != null) {
+                                    progressDialog.dismiss();
+                                }
+                                try {
+                                    if (response != null) {
+                                        JSONArray jsonArray = response.getJSONArray("data");
+                                        List<NoteModel> noteModels = JSON.parseArray(jsonArray.toString(),
+                                                NoteModel.class);
+                                        showData(noteModels);
+                                    }
+                                } catch (JSONException e) {
+                                    showData(null);
+                                }
+                            }
+                        });
+    }
+
+    private void showData(List<NoteModel> noteModels) {
+        if (noteModels!=null&&noteModels.size() != 0) {
+            noteList = noteModels;
             noDataLayout.setVisibility(View.GONE);
             noteListView.setVisibility(View.VISIBLE);
-
-            SimpleAdapter simpleAdapter = new SimpleAdapter(NoteActivity.this, noteList,
-                    R.layout.note_item,
-                    new String[]{FrameUtils.IT_NOTE_TITLE, FrameUtils.IT_NOTE_TIME, FrameUtils.IT_NOTE_CONTENT},
-                    new int[]{R.id.note_title, R.id.note_time, R.id.note_content});
-            noteListView.setAdapter(simpleAdapter);
+            noteListView.setAdapter(new NoteListAdapter(NoteActivity.this, noteModels));
             noteListView.setOnItemClickListener(new itemOnClick());
             noteListView.setOnItemLongClickListener(new itemLongOnClick());
         } else {
@@ -81,9 +119,11 @@ public class NoteActivity extends Activity {
         }
     }
 
+   /* */
+
     /**
      * 从数据获得便签
-     */
+     *//*
     private ArrayList<HashMap<String, Object>> getNotesFromDB() {
 
         ArrayList<HashMap<String, Object>> noteListTmp = new ArrayList<>();
@@ -104,12 +144,21 @@ public class NoteActivity extends Activity {
             e.printStackTrace();
         }
         return noteListTmp;
+    }*/
+    private void deleteNoteNet(int noteId) {
+        ManagerApplication.getInstance().getApiHttpClient().noteDeleteNet(
+                ManagerApplication.getInstance().getUserId(),noteId,
+                new AsyncApiResponseHandler(NoteActivity.this){
+                    @Override
+                    public void onApiResponse(JSONObject response) {
+                        super.onApiResponse(response);
+                    }
+                });
     }
-
     /**
      * 删除
      */
-    private void deleteNote(int noteId) {
+  /*  private void deleteNote(int noteId) {
         try {
             noteDao = ManagerApplication.getInstance()
                     .getManagerDBHelper().getDao(NoteTable.class);
@@ -120,7 +169,7 @@ public class NoteActivity extends Activity {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    }
+    }*/
 
     /**
      * 监听器，单击进入新增便签
@@ -128,11 +177,11 @@ public class NoteActivity extends Activity {
     class itemOnClick implements AdapterView.OnItemClickListener {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            HashMap<String, Object> hashMap = noteList.get(position);
+            NoteModel noteModel = noteList.get(position);
             Intent intent = new Intent();
             intent.setClass(NoteActivity.this, NoteEditActivity.class);
             Bundle bundle = new Bundle();
-            bundle.putSerializable(FrameUtils.IT_NOTE_MAP, hashMap);
+            bundle.putSerializable(FrameUtils.IT_NOTE_MAP, noteModel);
             intent.putExtras(bundle);
             startActivityForResult(intent, 0);
             overridePendingTransition(android.R.anim.slide_in_left,
@@ -146,7 +195,7 @@ public class NoteActivity extends Activity {
     class itemLongOnClick implements AdapterView.OnItemLongClickListener {
         @Override
         public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-            int noteId = (Integer) noteList.get(position).get(FrameUtils.IT_NOTE_ID);
+            int noteId = noteList.get(position).getId();
             alertDlg(noteId);
             return true;
         }
@@ -166,10 +215,10 @@ public class NoteActivity extends Activity {
 
     @OnClick(R.id.edit_note)
     public void gotoNoteEdit() {
-        HashMap<String, Object> hashMap = new HashMap<>();
+        NoteModel noteModel=new NoteModel();
         Intent intent = new Intent();
         Bundle bundle = new Bundle();
-        bundle.putSerializable(FrameUtils.IT_NOTE_MAP, hashMap);
+        bundle.putSerializable(FrameUtils.IT_NOTE_MAP, noteModel);
         intent.putExtras(bundle);
         intent.setClass(NoteActivity.this, NoteEditActivity.class);
         startActivityForResult(intent, 1);
@@ -189,7 +238,7 @@ public class NoteActivity extends Activity {
         alertDialog.setPositiveButton("确定", new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                deleteNote(noteId);
+                deleteNoteNet(noteId);
                 alertDialog.cancel();
             }
         });

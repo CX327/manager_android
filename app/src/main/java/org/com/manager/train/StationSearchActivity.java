@@ -67,7 +67,7 @@ public class StationSearchActivity extends Activity {
      */
     private void allStationListNet() {
         ManagerApplication.getInstance().getApiHttpClient()
-                .allStationListNet(new AsyncApiResponseHandler(StationSearchActivity.this) {
+                .allStationListNet(ManagerApplication.getInstance().getUserId(),new AsyncApiResponseHandler(StationSearchActivity.this) {
                     @Override
                     public void onApiResponse(JSONObject response) {
                         super.onApiResponse(response);
